@@ -35,5 +35,5 @@ TOTAL           12285
 
 # To-do
 - [ ] Add option to disable recursion
-- [ ] Add option to not count hidden files
+- [ ] Add option to skip hidden files
 - [ ] Add option to sort output by extension name instead of frequency/count
