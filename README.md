@@ -1,7 +1,7 @@
 # Count File Extensions
 A Python program that counts the frequency of each file extension in a directory (recursive and includes hidden files).
 
-Written and tested on macOS 12.5, however it is intended to work on Windows and Linux as well.
+Written and tested on macOS 12.5 in Visual Studio Code, however it is intended to work on Windows and Linux as well.
  
 # Usage
 ```
