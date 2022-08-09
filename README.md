@@ -5,19 +5,28 @@ Written and tested on macOS 12.5 in Visual Studio Code, however it is intended t
  
 # Usage
 ```
-usage: __main__.py [-h] [--directory DIRECTORY]
+usage: __main__.py [-h] -d DIRECTORY [-e EXTENSIONS [EXTENSIONS ...]] [-H] [-s]
 
 options:
   -h, --help            show this help message and exit
-  --directory DIRECTORY, -d DIRECTORY
-                        The directory path the program will target.
+  -d DIRECTORY, --directory DIRECTORY
+                        directory path the program will target
+  -e EXTENSIONS [EXTENSIONS ...], --extensions EXTENSIONS [EXTENSIONS ...]
+                        only count specified extensions (space-separated)
+  -H, --hidden_disabled
+                        skip all hidden files (defined by '.' prefix)
+  -s, --sort_alphabetically
+                        sort output (a-z) by extension
 ```
 
 # Example
 ```
 >> python3 __main__.py -d /Users/DemoUser/Documents/ExampleDir
 
-Counting file extensions recursively in: /Users/DemoUser/Documents/ExampleDir
+DIRECTORY:      /Users/DemoUser/Documents/ExampleDir
+SKIP HIDDEN:    False
+EXTENSIONS:     All
+SORT:           Frequency
 
 EXTENSION |     COUNT
 ----------+----------
@@ -34,6 +43,9 @@ TOTAL           12285
 ```
 
 # To-do
+- [X] Add option to skip hidden files (starting with '.')
+- [X] Add option to sort output by extension name instead of frequency/count
+- [X] Add option to only count specific extensions
 - [ ] Add option to disable recursion
-- [ ] Add option to skip hidden files
-- [ ] Add option to sort output by extension name instead of frequency/count
+- [ ] Add consistent casing for output when extension filtering is used
+- [ ] Fix extension filtering only working if input is lowercase
